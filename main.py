@@ -11,5 +11,10 @@ incident = Incident(
     level="alto"
 )
 service.create_incident(incident)
+
+# prueba de cambio de estado de la incidencia
+service.change_status(1, "en análisis")
+print(service.find_incident(1))
+
 for item in service.list_incidents():
     print(item)
